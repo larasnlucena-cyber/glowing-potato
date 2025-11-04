@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brasileirão Série A - 29ª Rodada</title>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-left: 4px solid #00923f;
+    padding-left: 10px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 400px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background: #f3f3f3;
+    font-weight: bold;
+    font-size: 13px;
+    color: #555;
+  }
+
+  td {
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+  }
+
+  .time img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pos {
+    font-weight: bold;
+    width: 25px;
+  }
+
+  .ultimos {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .v { background: #00923f; }
+  .e { background: #ccc; }
+  .d { background: #d00; }
+
+  .subiu { color: #00923f; font-weight: bold; }
+  .desceu { color: #d00; font-weight: bold; }
+
+  /* Caixa dos jogos */
+  .jogos {
+    width: 340px;
+    background: white;
+    border-radius: 8px;
+    padding: 10px 15px;
+  }
+
+  .jogo {
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .jogo:last-child {
+    border-bottom: none;
+  }
+
+  .equipes {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .equipes img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .placar {
+    font-weight: bold;
+    color: #000;
+  }
+
+  .info {
+    font-size: 12px;
+    color: #777;
+  }
+
+  .rodada {
+    text-align: center;
+    color: #00923f;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- TABELA -->
+  <div>
+    <h2>TABELA</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Time</th>
+          <th>P</th>
+          <th>J</th>
+          <th>V</th>
+          <th>E</th>
+          <th>D</th>
+          <th>GP</th>
+          <th>GC</th>
+          <th>SG</th>
+          <th>Últ.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/palmeiras.svg">Palmeiras</td><td>61</td><td>28</td><td>18</td><td>7</td><td>3</td><td>53</td><td>26</td><td>27</td><td class="ultimos"><div class="d circle"></div><div class="v circle"></div><div class="v circle"></div><div class="v circle"></div><div class="v circle"></div></td></tr>
+        <tr><td>2</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/flamengo.svg">Flamengo</td><td>61</td><td>28</td><td>18</td><td>7</td><td>3</td><td>55</td><td>31</td><td>24</td><td class="ultimos"><div class="v circle"></div><div class="v circle"></div><div class="v circle"></div><div class="v circle"></div><div class="v circle"></div></td></tr>
+        <tr><td>3</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/cruzeiro.svg">Cruzeiro</td><td>56</td><td>28</td><td>16</td><td>8</td><td>4</td><td>45</td><td>24</td><td>21</td><td class="ultimos"><div class="v circle"></div><div class="e circle"></div><div class="v circle"></div><div class="d circle"></div><div class="v circle"></div></td></tr>
+        <tr><td>4</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2024/03/25/mirassol.svg">Mirassol</td><td>52</td><td>29</td><td>14</td><td>10</td><td>5</td><td>50</td><td>30</td><td>20</td><td class="ultimos"><div class="v circle"></div><div class="v circle"></div><div class="e circle"></div><div class="d circle"></div><div class="v circle"></div></td></tr>
+        <tr><td>5</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/botafogo.svg">Botafogo</td><td>46</td><td>29</td><td>13</td><td>7</td><td>9</td><td>39</td><td>32</td><td>7</td><td class="ultimos"><div class="d circle"></div><div class="e circle"></div><div class="d circle"></div><div class="v circle"></div><div class="d circle"></div></td></tr>
+        <tr><td>6</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/bahia.svg">Bahia</td><td>45</td><td>28</td><td>13</td><td>6</td><td>9</td><td>38</td><td>34</td><td>4</td><td class="ultimos"><div class="v circle"></div><div class="v circle"></div><div class="d circle"></div><div class="v circle"></div><div class="v circle"></div></td></tr>
+        <tr><td>7</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/fluminense.svg">Fluminense</td><td>38</td><td>28</td><td>10</td><td>8</td><td>10</td><td>33</td><td>32</td><td>1</td><td class="ultimos"><div class="d circle"></div><div class="e circle"></div><div class="v circle"></div><div class="e circle"></div><div class="d circle"></div></td></tr>
+        <tr><td>8</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/sao-paulo.svg">São Paulo</td><td>38</td><td>28</td><td>10</td><td>8</td><td>10</td><td>31</td><td>33</td><td>-2</td><td class="ultimos"><div class="e circle"></div><div class="d circle"></div><div class="v circle"></div><div class="e circle"></div><div class="v circle"></div></td></tr>
+        <tr><td>9</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/vasco.svg">Vasco</td><td>38</td><td>28</td><td>10</td><td>8</td><td>10</td><td>41</td><td>42</td><td>-1</td><td class="ultimos"><div class="d circle"></div><div class="v circle"></div><div class="d circle"></div><div class="v circle"></div><div class="v circle"></div></td></tr>
+        <tr><td>10</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/bragantino.svg">Bragantino</td><td>36</td><td>28</td><td>10</td><td>6</td><td>12</td><td>43</td><td>42</td><td>1</td><td class="ultimos"><div class="e circle"></div><div class="d circle"></div><div class="v circle"></div><div class="d circle"></div><div class="e circle"></div></td></tr>
+        <tr><td>11</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/corinthians.svg">Corinthians</td><td>36</td><td>29</td><td>9</td><td>9</td><td>11</td><td>31</td><td>41</td><td>-10</td><td class="ultimos"><div class="v circle"></div><div class="d circle"></div><div class="e circle"></div><div class="e circle"></div><div class="v circle"></div></td></tr>
+        <tr><td>12</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/gremio.svg">Grêmio</td><td>36</td><td>29</td><td>9</td><td>9</td><td>11</td><td>37</td><td>41</td><td>-4</td><td class="ultimos"><div class="e circle"></div><div class="d circle"></div><div class="d circle"></div><div class="v circle"></div><div class="d circle"></div></td></tr>
+        <tr><td>13</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/ceara.svg">Ceará</td><td>35</td><td>28</td><td>9</td><td>8</td><td>11</td><td>37</td><td>41</td><td>-4</td><td class="ultimos"><div class="v circle"></div><div class="v circle"></div><div class="e circle"></div><div class="v circle"></div><div class="d circle"></div></td></tr>
+        <tr><td>14</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/internacional.svg">Internacional</td><td>33</td><td>28</td><td>8</td><td>9</td><td>11</td><td>31</td><td>36</td><td>-5</td><td class="ultimos"><div class="v circle"></div><div class="e circle"></div><div class="d circle"></div><div class="v circle"></div><div class="d circle"></div></td></tr>
+        <tr><td>15</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/atletico-mg.svg">Atlético-MG</td><td>31</td><td>27</td><td>8</td><td>7</td><td>12</td><td>30</td><td>31</td><td>-1</td><td class="ultimos"><div class="d circle"></div><div class="d circle"></div><div class="v circle"></div><div class="d circle"></div><div class="v circle"></div></td></tr>
+        <tr><td>16</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/santos.svg">Santos</td><td>28</td><td>28</td><td>8</td><td>4</td><td>16</td><td>30</td><td>43</td><td>-13</td><td class="ultimos"><div class="d circle"></div><div class="v circle"></div><div class="d circle"></div><div class="e circle"></div><div class="d circle"></div></td></tr>
+        <tr><td>17</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2023/03/01/vitoria.svg">Vitória</td><td>28</td><td>28</td><td>7</td><td>7</td><td>14</td><td>33</td><td>47</td><td>-14</td><td class="ultimos"><div class="d circle"></div><div class="d circle"></div><div class="d circle"></div><div class="e circle"></div><div class="v circle"></div></td></tr>
+        <tr><td>18</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/fortaleza.svg">Fortaleza</td><td>24</td><td>28</td><td>6</td><td>6</td><td>16</td><td>29</td><td>48</td><td>-19</td><td class="ultimos"><div class="e circle"></div><div class="d circle"></div><div class="d circle"></div><div class="d circle"></div><div class="d circle"></div></td></tr>
+        <tr><td>19</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/juventude.svg">Juventude</td><td>17</td><td>28</td><td>4</td><td>5</td><td>19</td><td>21</td><td>51</td><td>-30</td><td class="ultimos"><div class="d circle"></div><div class="e circle"></div><div class="d circle"></div><div class="e circle"></div><div class="d circle"></div></td></tr>
+        <tr><td>20</td><td class="time"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/sport.svg">Sport</td><td>17</td><td>28</td><td>4</td><td>5</td><td>19</td><td>21</td><td>43</td><td>-22</td><td class="ultimos"><div class="d circle"></div><div class="d circle"></div><div class="e circle"></div><div class="d circle"></div><div class="d circle"></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- JOGOS -->
+  <div class="jogos">
+    <h2>JOGOS</h2>
+    <div class="rodada">29ª RODADA</div>
+    <div class="jogo"><span class="info">Neo Química Arena • Sábado • 18:30</span></div>
+    <div class="jogo"><div class="equipes"><img src="https://s.glbimg.com/es/sde/f/organizacoes/2019/04/05/corinthians.svg">Corinthians</div><
