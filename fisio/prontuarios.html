@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clientes</title>
+  <title>Prontuários</title>
 
   <!-- Estilos -->
   <link rel="stylesheet" href="css/style.css">
@@ -13,7 +13,7 @@
   <!-- Cabeçalho -->
   <header class="header">
     <div class="logo">
-      <img src="assets/logo.png" alt="Logo do sistema FisioTerapia">
+      <img src="logo.png" alt="Logo do sistema FisioTerapia">
       <span>FisioTerapia</span>
     </div>
 
@@ -33,51 +33,19 @@
 
   <!-- Conteúdo principal -->
   <main class="container">
-
-    <!-- Cadastro de clientes -->
     <section class="card">
-      <h2>Cadastro de Clientes</h2>
+      <h2>Prontuários</h2>
 
-      <div class="form-group">
-        <label>Nome do cliente</label>
-        <input
-          type="text"
-          placeholder="Nome completo"
-          aria-label="Nome completo do cliente"
-        >
+      <div class="prontuario-item">
+        <strong>Maria Silva</strong>
+        <button aria-label="Abrir prontuário de Maria Silva">Abrir</button>
       </div>
 
-      <div class="form-group">
-        <label>Email</label>
-        <input
-          type="email"
-          placeholder="email@exemplo.com"
-          aria-label="Email do cliente"
-        >
+      <div class="prontuario-item">
+        <strong>João Santos</strong>
+        <button aria-label="Abrir prontuário de João Santos">Abrir</button>
       </div>
-
-      <div class="form-group">
-        <label>Telefone</label>
-        <input
-          type="tel"
-          placeholder="(00) 00000-0000"
-          aria-label="Telefone do cliente"
-        >
-      </div>
-
-      <button aria-label="Cadastrar novo cliente">Cadastrar Cliente</button>
     </section>
-
-    <!-- Lista de clientes -->
-    <section class="card">
-      <h2>Lista de Clientes</h2>
-      <ul class="simple-list">
-        <li>Maria Silva</li>
-        <li>João Santos</li>
-        <li>Ana Oliveira</li>
-      </ul>
-    </section>
-
   </main>
 
   <!-- Scripts -->

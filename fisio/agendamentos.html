@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Check-in</title>
+  <title>Agendamentos</title>
 
   <!-- Estilos -->
   <link rel="stylesheet" href="css/style.css">
@@ -13,7 +13,7 @@
   <!-- Cabeçalho -->
   <header class="header">
     <div class="logo">
-      <img src="assets/logo.png" alt="Logo do sistema FisioTerapia">
+      <img src="logo.png" alt="Logo do sistema FisioTerapia">
       <span>FisioTerapia</span>
     </div>
 
@@ -34,30 +34,11 @@
   <!-- Conteúdo principal -->
   <main class="container">
     <section class="card">
-      <h2>Check-in de Pacientes</h2>
+      <h2>Novo Agendamento</h2>
 
-      <div class="form-group">
-        <label>Paciente</label>
-        <input
-          type="text"
-          placeholder="Nome do paciente"
-          aria-label="Nome do paciente"
-        >
-      </div>
-
-      <div class="form-group">
-        <label>Data</label>
-        <input type="date" aria-label="Data do check-in">
-      </div>
-
-      <div class="form-group">
-        <label>Horário</label>
-        <input type="time" aria-label="Horário do check-in">
-      </div>
-
-      <button aria-label="Confirmar check-in do paciente">
-        Confirmar Check-in
-      </button>
+      <input type="date" aria-label="Data do agendamento">
+      <input type="time" aria-label="Hora do agendamento">
+      <button aria-label="Agendar novo atendimento">Agendar</button>
     </section>
   </main>
 
@@ -66,4 +47,4 @@
   <script src="js/theme.js"></script>
 
 </body>
-</html
+</html>
