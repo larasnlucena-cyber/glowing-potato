@@ -1,25 +1,24 @@
 /* =========================
-   VARIÁVEIS DE CORES E PADRÃO
+   VARIÁVEIS DE CORES
 ========================= */
 :root {
-  --primary: #0f766e;           /* Azul-verde */
-  --primary-light: #14b8a6;
-  --secondary: #e6f4f1;         /* Fundo card leve */
-  --background: #f7fbfa;        /* Fundo geral */
+  --primary: #0f766e;
+  --primary-light: #115e59;
+  --secondary: #f4f8fb;
+  --background: #e5e7eb;
   --white: #ffffff;
-  --text: #134e4a;
-  --text-light: #5f7f7b;
+  --text: #1f2937;
+  --text-light: #6b7280;
   --success: #16a34a;
   --danger: #dc2626;
 
-  --radius: 14px;
-  --shadow: 0 10px 25px rgba(15, 118, 110, 0.12);
+  --radius: 12px;
+  --shadow: 0 8px 20px rgba(0,0,0,0.08);
   --transition: 0.25s ease;
-  --font-family: 'Inter', Arial, sans-serif;
 }
 
 /* =========================
-   RESET E BASE
+   RESET + BASE
 ========================= */
 * {
   margin: 0;
@@ -32,7 +31,7 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   background: var(--background);
   color: var(--text);
   line-height: 1.6;
@@ -42,11 +41,12 @@ body {
    HEADER / NAV
 ========================= */
 .app-header {
-  background: var(--white);
-  box-shadow: var(--shadow);
+  background: var(--primary);
+  color: var(--white);
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: var(--shadow);
 }
 
 .header-container {
@@ -56,6 +56,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -70,43 +71,48 @@ body {
 
 .brand-name {
   font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--primary);
+  font-weight: 600;
 }
 
 .main-nav {
   display: flex;
-  gap: 28px;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .main-nav a {
-  color: var(--text);
+  color: var(--white);
   text-decoration: none;
   font-weight: 500;
   position: relative;
   padding-bottom: 4px;
 }
 
-.main-nav a.active::after,
-.main-nav a:hover::after {
+.main-nav a::after {
   content: "";
   position: absolute;
-  left: 0;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  width: 0;
   height: 2px;
-  background: var(--primary);
+  background: var(--white);
   transition: var(--transition);
 }
 
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
 /* =========================
-   CONTAINER PRINCIPAL
+   CONTAINER / MAIN
 ========================= */
 .app-main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 24px;
 }
@@ -116,8 +122,8 @@ body {
 ========================= */
 .card {
   background: var(--white);
-  border-radius: var(--radius);
   padding: 28px;
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
   transition: var(--transition);
 }
@@ -126,14 +132,14 @@ body {
   transform: translateY(-4px);
 }
 
-.card-header h1,
-.card-header h2 {
-  color: var(--primary);
+.card-header h1 {
   margin-bottom: 8px;
+  color: var(--primary);
 }
 
 .card-header p {
   color: var(--text-light);
+  font-size: 0.9rem;
 }
 
 /* =========================
@@ -157,18 +163,22 @@ label {
 }
 
 input, select, textarea {
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid #b6e1dc;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid #d1d5db;
   font-size: 0.95rem;
-  background: #fff;
   transition: var(--transition);
 }
 
 input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.25);
+  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 /* =========================
@@ -176,7 +186,7 @@ input:focus, select:focus, textarea:focus {
 ========================= */
 button, .btn-primary {
   padding: 14px;
-  border-radius: 12px;
+  border-radius: var(--radius);
   border: none;
   background: var(--primary);
   color: var(--white);
@@ -191,22 +201,25 @@ button:hover, .btn-primary:hover {
 }
 
 /* =========================
-   LISTAS E STATUS
+   LISTAS
 ========================= */
 ul {
   list-style: none;
+  margin-top: 20px;
 }
 
 ul li {
   padding: 12px 14px;
   background: var(--secondary);
-  border-radius: 10px;
+  border-radius: var(--radius);
   margin-bottom: 10px;
   font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .status {
-  display: inline-block;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -224,17 +237,29 @@ ul li {
 }
 
 /* =========================
+   RODAPÉ FORMULÁRIO
+========================= */
+.form-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.form-footer a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* =========================
    RESPONSIVO
 ========================= */
 @media (max-width: 900px) {
   .header-container {
     flex-direction: column;
     gap: 18px;
-    padding: 20px;
   }
 
   .main-nav {
-    flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
   }
@@ -242,40 +267,44 @@ ul li {
 
 @media (max-width: 480px) {
   .header-container {
-    padding: 10px;
+    padding: 20px 10px;
   }
 
   .brand-name {
     font-size: 1.2rem;
   }
 }
-
+  
 /* =========================
    DARK MODE
 ========================= */
 body.dark {
-  background: #042f2e;
-  color: #ecfeff;
+  background: #0f172a;
+  color: #e5e7eb;
 }
 
 body.dark .app-header {
-  background: #022c22;
+  background: #020617;
+  color: #e5e7eb;
 }
 
 body.dark .card {
-  background: #022c22;
-  color: #ecfeff;
-  border-left: 6px solid #2dd4bf;
+  background: #020617;
+  color: #e5e7eb;
 }
 
 body.dark input, 
 body.dark select, 
 body.dark textarea {
-  background: #022c22;
-  border-color: #134e4a;
-  color: #ecfeff;
+  background: #020617;
+  color: #e5e7eb;
+  border-color: #334155;
 }
 
 body.dark .main-nav a {
-  color: #ecfeff;
+  color: #e5e7eb;
+}
+
+body.dark .main-nav a.active::after {
+  background: #22c55e;
 }
