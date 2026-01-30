@@ -3,86 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro | FisioTerapia</title>
-
-  <!-- Estilos -->
+  <title>Clinica Fisio | Criar Conta</title>
   <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 20px;
+      min-height: 100vh;
+    }
+    .app-main { margin-left: 0 !important; width: 100%; display: flex; justify-content: center; }
+    .card.cadastro-card { max-width: 450px; width: 100%; border-radius: 20px; animation: fadeIn 0.5s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
 </head>
 <body>
 
-  <!-- Cabeçalho -->
-  <header class="header">
-    <div class="logo">
-      <img src="assets/logo.png" alt="Logo do sistema FisioTerapia">
-      <span>FisioTerapia</span>
-    </div>
-
-    <!-- Navegação principal -->
-    <nav class="nav">
-      <a href="index.html">Login</a>
-      <a href="cadastro.html" class="active">Cadastro</a>
-    </nav>
-  </header>
-
-  <!-- Conteúdo principal -->
-  <main class="center-page">
+  <main class="app-main">
     <section class="card cadastro-card">
-      <h1>Criar Conta</h1>
+      
+      <div class="brand" style="margin-bottom: 30px;">
+        <img src="assets/logo.png" alt="Logo Clinica Fisio" class="brand-logo" style="background: var(--secondary);">
+        <h2 style="color: var(--primary-dark); font-weight: 800;">CLINICA FISIO</h2>
+      </div>
 
-      <form id="cadastroForm" class="cadastro-form">
+      <div class="card-header" style="text-align: center;">
+        <h1>Criar Conta</h1>
+        <p>Preencha os dados para acessar o sistema.</p>
+      </div>
+
+      <form id="cadastroForm">
 
         <div class="form-group">
-          <label>Nome completo</label>
-          <input
-            type="text"
-            required
-            placeholder="Seu nome"
-            aria-label="Nome completo"
-          >
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" name="nome" required placeholder="Ex: Dr. Roberto Silva" tabindex="1">
         </div>
 
         <div class="form-group">
-          <label>Email</label>
-          <input
-            type="email"
-            required
-            placeholder="email@exemplo.com"
-            aria-label="Email"
-          >
+          <label for="email">Email Profissional</label>
+          <input type="email" id="email" name="email" required placeholder="roberto@clinicafisio.com" tabindex="2">
         </div>
 
         <div class="form-group">
-          <label>Senha</label>
-          <input
-            type="password"
-            required
-            placeholder="****"
-            aria-label="Senha"
-          >
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" required placeholder="Crie uma senha forte" tabindex="3">
         </div>
 
         <div class="form-group">
-          <label>Tipo de usuário</label>
-          <select required aria-label="Tipo de usuário">
-            <option value="">Selecione</option>
-            <option>Administrador</option>
-            <option>Profissional</option>
-            <option>Recepção</option>
+          <label for="nivel">Nível de Acesso</label>
+          <select id="nivel" name="nivel" required tabindex="4">
+            <option value="" disabled selected>Selecione sua função</option>
+            <option value="admin">Administrador (Acesso Total)</option>
+            <option value="fisio">Fisioterapeuta (Prontuários e Agenda)</option>
+            <option value="recepcao">Recepção (Check-in e Cadastro)</option>
+            <option value="financeiro">Financeiro (Contas e Mensalidades)</option>
           </select>
         </div>
 
-        <button type="submit" aria-label="Cadastrar novo usuário">Cadastrar</button>
+        <button type="submit" class="btn" style="width: 100%; margin-top: 15px; padding: 15px;" tabindex="5">
+          Finalizar Cadastro
+        </button>
       </form>
 
-      <p class="form-footer">
-        Já tem conta? <a href="index.html">Fazer login</a>
-      </p>
+      <div class="form-footer" style="margin-top: 25px; border-top: 1px solid #eee; padding-top: 20px; text-align: center;">
+        <p>Já possui uma conta? <a href="index.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">Acesse o Login</a></p>
+      </div>
     </section>
   </main>
 
-  <!-- Scripts -->
   <script src="js/app.js"></script>
-  <script src="js/theme.js"></script>
-
 </body>
 </html>
