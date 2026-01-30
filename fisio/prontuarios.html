@@ -3,19 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prontuários | FisioTerapia</title>
+  <title>Prontuários</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="app-header">
-  <div class="header-container">
-    <div class="brand">
-      <img src="assets/logo.png" alt="Logo FisioTerapia" class="brand-logo">
-      <span class="brand-name">FisioTerapia</span>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo do sistema FisioTerapia">
+      <span>FisioTerapia</span>
     </div>
-    <nav class="main-nav" aria-label="Navegação principal">
+
+    <!-- Navegação principal -->
+    <nav class="nav">
       <a href="dashboard.html">Dashboard</a>
       <a href="clientes.html">Clientes</a>
       <a href="profissionais.html">Profissionais</a>
       <a href="agendamentos.html">Agendamentos</a>
+      <a href="checkin.html">Check-in</a>
+      <a href="prontuarios.html">Prontuários</a>
+      <a href="mensalidades.html">Mensalidades</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a href="configuracoes.html">Configurações</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <section class="card">
+      <h2>Prontuários</h2>
+
+      <div class="prontuario-item">
+        <strong>Maria Silva</strong>
+        <button aria-label="Abrir prontuário de Maria Silva">Abrir</button>
+      </div>
+
+      <div class="prontuario-item">
+        <strong>João Santos</strong>
+        <button aria-label="Abrir prontuário de João Santos">Abrir</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/theme.js"></script>
+
+</body>
+</html>
