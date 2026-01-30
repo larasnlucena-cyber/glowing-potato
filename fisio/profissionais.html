@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clinica Fisio | Profissionais</title>
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,15 +16,15 @@
       </div>
 
       <nav class="main-nav">
-        <a href="dashboard.html">Dashboard</a>
-        <a href="clientes.html">Clientes</a>
-        <a href="profissionais.html" class="active">Profissionais</a>
-        <a href="agendamentos.html">Agendamentos</a>
-        <a href="checkin.html">Check-in</a>
-        <a href="prontuarios.html">Prontuários</a>
-        <a href="mensalidades.html">Mensalidades</a>
-        <a href="relatorios.html">Relatórios</a>
-        <a href="configuracoes.html">Configurações</a>
+        <a href="dashboard.html" id="nav-dash">Dashboard</a>
+        <a href="clientes.html" id="nav-clients">Clientes</a>
+        <a href="profissionais.html" class="active" id="nav-pro">Profissionais</a>
+        <a href="agendamentos.html" id="nav-agenda">Agendamentos</a>
+        <a href="checkin.html" id="nav-check">Check-in</a>
+        <a href="prontuarios.html" id="nav-medical">Prontuários</a>
+        <a href="mensalidades.html" id="nav-fin">Mensalidades</a>
+        <a href="relatorios.html" id="nav-reports">Relatórios</a>
+        <a href="configuracoes.html" id="nav-config">Configurações</a>
       </nav>
     </div>
   </header>
@@ -35,15 +34,58 @@
       
       <section class="card">
         <div class="card-header">
-          <h1>Gestão de Profissionais</h1>
-          <p>Cadastre novos especialistas e defina suas áreas de atuação.</p>
+          <h1 id="txt-pro-title">Gestão de Profissionais</h1>
+          <p id="txt-pro-desc">Cadastre novos especialistas e defina suas áreas de atuação.</p>
         </div>
 
-        <form>
+        <form id="formProfissional">
           <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px;">
             <div class="form-group">
-              <label>Nome Completo</label>
-              <input type="text" placeholder="Ex: Dr. Carlos Lima" required>
+              <label for="nomePro">Nome Completo</label>
+              <input type="text" id="nomePro" placeholder="Ex: Dr. Carlos Lima" required tabindex="1">
             </div>
             <div class="form-group">
-              <label>Registro (CREFITO)</label>
+              <label for="crefito">Registro (CREFITO)</label>
+              <input type="text" id="crefito" placeholder="00000-F" required tabindex="2">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="especialidade">Especialidade Principal</label>
+            <select id="especialidade" required tabindex="3">
+              <option value="" disabled selected>Selecione uma especialidade</option>
+              <option value="ortopedia">Fisioterapia Ortopédica</option>
+              <option value="rpg">RPG / Reeducação Postural</option>
+              <option value="osteopatia">Osteopatia</option>
+              <option value="desportiva">Fisioterapia Desportiva</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn" style="width: 100%; margin-top: 10px;" tabindex="4" id="btn-register-pro">
+            Registrar Profissional
+          </button>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2 id="txt-pro-list">Corpo Clínico Ativo</h2>
+        </div>
+        
+        <div class="lista-corpo-clinico" style="margin-top: 20px;">
+          <div class="item-lista">
+            <div>
+              <strong style="color: var(--primary-dark);">Dr. Carlos Lima</strong><br>
+              <small style="color: var(--text-light)">Fisioterapia Ortopédica</small>
+            </div>
+            <span class="status pago">Disponível</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
